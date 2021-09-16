@@ -7,8 +7,11 @@ public class MyMain {
     //     isLetter('?') => false
     //     isLetter('4') => false
     public static boolean isLetter(char c) {
-        // REPLACE WITH YOUR CODE HERE
-        return false;
+        if ((c >= 'A' && c<='Z') || (c >= 'a' && c<='z')){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     // This method is given two chars as input, c1 and c2
@@ -34,8 +37,14 @@ public class MyMain {
     //     nextLetter('a') => 'b'
     //     nextLetter('z') => 'a'
     public static char nextLetter(char ch) {
-        // REPLACE WITH YOUR CODE HERE
-        return ' ';
+        if ((ch>='A' && ch<'Z') || (ch>='a' && ch<'z')) {
+            return (char) (ch + 1);
+        } else {
+            if (ch == 'z') {
+                return 'a';
+            } else
+                return 'A';
+        }
     }
 
     // Similar to the previous example, the method is given a char ch. However, the method
